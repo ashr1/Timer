@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="app-container">
+	<header class="function-name">Stopwatch</header>
+	<div class="timer-part"><input class="hr" type="text" maxlength="2" value="00"><p class="r-hr"></p><p>hr</p></div>
+	<div class="timer-part"><input class="min" type="text" maxlength="2" value="00"><p class="r-min"></p><p>min</p></div>
+	<div class="timer-part"><input class="sec" type="text" maxlength="2" value="00"><p class="r-sec"></p><p>sec</p></div>
+	<div class="button-container">
+		<input type="button" class="start-stop" value="Start">
+		<input type="button" class="reset" value="Reset">
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://underscorejs.org/underscore-min.js"></script>
+<script src="http://backbonejs.org/backbone-min.js"></script>
+<script src="js/timer.js"></script>
+</body>
+</html>
