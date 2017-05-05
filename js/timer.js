@@ -1,6 +1,7 @@
-var timeHr, timeMin, timeSec, aggTime;
+var timeHr, timeMin, timeSec, aggTime, partitionAndPrintt;
 
 var startStop = $('.start-stop');
+var resetButton = $('.reset');
 var domHr = $('.hr');
 var domMin = $('.min');
 var domSec = $('.sec');
@@ -18,7 +19,18 @@ startStop.click(function() {
 		aggTime = (60 * 60 * timeHr) + (60 * timeMin) + timeSec;
 		stopwatchTime();
 	}
+	else {
+		clearInterval(partitionAndPrint);
+		startStop.empty().val("Start");
+		domHr.empty().val(rHr.html());
+		domMin.empty().val(rMin.html());
+		domSec.empty().val(rSec.html());
+	}
 	
+});
+
+resetButton.click(function() {
+	console.log("you clicked the reset button.");
 });
 
 
@@ -27,7 +39,7 @@ var stopwatchTime = function() {
 	var toPartition;
 	var timeArr = [0 ,0, 0];
 
-	var partitionAndPrint = setInterval(function(){
+	partitionAndPrint = setInterval(function(){
 
 		toPartition = currentRemaining;
 
