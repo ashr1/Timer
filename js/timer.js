@@ -30,7 +30,15 @@ startStop.click(function() {
 });
 
 resetButton.click(function() {
-	console.log("you clicked the reset button.");
+	//console.log("you clicked the reset button.");
+	if(partitionAndPrint) {
+		clearInterval(partitionAndPrint);
+		startStop.empty().val("Start");
+	}
+	domHr.val(0);
+	domMin.val(0);
+	domSec.val(0);
+	
 });
 
 
